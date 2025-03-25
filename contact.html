@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Form - ONLINE PLANT STORE</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+}
+body{
+  background: url("c.jpeg") no-repeat center;
+  background-size: cover;
+ opacity: 0.9;
+}
+.contact-section{
+margin-top: 50px;
+  padding: 40px 0;
+ 
+}
+.contact-section h1{
+  text-align: center;
+  color:black;
+}
+.border{
+  width: 100px;
+  height: 10px;
+  background: #34495e;
+  background: none;
+  margin: 40px auto;
+}
+ 
+.contact-form{
+  max-width: 600px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+background: none;
+}
+ 
+.contact-form-text{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px 0;
+  border:none;
+  border: 1px solid #ccc;
+  padding: 20px 40px;
+  outline: none;
+  color: white;
+  transition: 0.5s;
+box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;x;
+}
+.contact-form-text:focus{
+  box-shadow: 0 0 10px 4px #34495e;
+  background: #fff;
+  color: #262626;
+  font-size: 14px;
+}
+textarea.contact-form-text{
+  resize: none;
+  height: 120px;
+  color:black;
+}
+.contact-form-btn{
+  float: right;
+  border: 0;
+  background: #34495e;
+  color: #fff;
+  padding: 12px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.contact-form-btn:hover{
+  background: #2980b9;
+}
+</style>
+<body>
+ 
+<div class="contact-section">
+ 
+  <h1><b>CONTACT US</b></h1>
+  <div class="border"></div>
+  <form class="contact-form" action="index.html" method="post">
+    <input type="text" class="contact-form-text" placeholder=" EnterYour name" required>
+    <input type="email" class="contact-form-text" placeholder=" EnterYour email" required>
+    <input type="text" class="contact-form-text" placeholder="Enter Your phone" required pattern="[1-10]{10}">
+    <textarea class="contact-form-text" placeholder=" Enter Your message" required></textarea>
+    <input type="submit" class="contact-form-btn" value="Send">
+  </form>
+</div>
+ 
+  <script>
+         const pass_field = document.querySelector('.pass-key');
+         const showBtn = document.querySelector('.show');
+         showBtn.addEventListener('click', function(){
+          if(pass_field.type === "password"){
+            pass_field.type = "text";
+            showBtn.textContent = "HIDE";
+            showBtn.style.color = "#3498db";
+          }else{
+            pass_field.type = "phonenumber";
+            showBtn.textContent = "SHOW";
+            showBtn.style.color = "#222";
+          }
+         });
+      </script>
+  </body>
+</html>
